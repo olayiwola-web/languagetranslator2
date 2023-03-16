@@ -18,19 +18,22 @@
 	<h1 translate="no">Welcome to my page</h1>
 	
 	<p>
-		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+		This webpage is to test for Translation Of Page from English to Turkish language. Thanks :)
 	</p>
 	<p>
-		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+		This webpage is to test for Translation Of Page from English to Turkish language. Thanks :)
 	</p>
 	<p>
-		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+		This webpage is to test for Translation Of Page from English to Turkish language. Thanks :)
 	</p>
 	<p>
-		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+		This webpage is to test for Translation Of Page from English to Turkish language. Thanks :)
 	</p>
 	<p>
-		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+		This webpage is to test for Translation Of Page from English to Turkish language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to Turkish language. Thanks :)
 	</p>
 	<div id="google_translate_element" style="display:none !important" ></div>
 	
@@ -48,9 +51,8 @@
 		
 		// cookies
 		var path = "path=/";
-		var defaultLang = generateLang()
 		//document.cookie = "googtrans=/en/tr;" + path;
-		document.cookie = 'googtrans=/en/' + defaultLang; +  path;
+		document.cookie = 'googtrans=/en/tr'; +  path;
 		
 		var cookies = document.cookie.split(';');
 		for (var i = 0; i < cookies.length; i++) {
@@ -59,17 +61,11 @@
 				var value = cookie.substring("googtrans=".length, cookie.length);
 				
 				// modify the cookie value
-				value = "/en/tr";
+				value = "tr";
 				// update the cookie
-                document.cookie = 'googtrans=/en/' + defaultLang; +  path;
+                document.cookie = 'googtrans=/en/tr'; +  path;
 				break;
 			}
-		}
-			function generateLang(){
-			var lang = navigator.language
-			var lang_iso = lang.substring(0, 2);
-			
-			return lang_iso;
 		}
 	</script>
 </body>
