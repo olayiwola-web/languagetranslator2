@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Translator</title>
+<meta name="viewport" content="width=device-width , initial-scale=1">
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style type="text/css">
+	.goog-te-banner-frame {
+		display: none !important;
+	}
+	.skiptranslate {
+		visibility:hidden;
+	}
+</style>
+</head>
+<body>
+	<h6><i><strong><big>#7</big></strong></i> 🥲</h6>
+	<h1 translate="no">Welcome to my page</h1>
+	
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<p>
+		This webpage is to test for Translation Of Page from English to another Specific language. Thanks :)
+	</p>
+	<div id="google_translate_element" style="display:none !important" ></div>
+	
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({
+		    pageLanguage: 'en',
+		    //includedLanguages: 'fr,es,ar,tr',
+		    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+		  }, 'google_translate_element');
+		}
+		window.onload = function() {
+			googleTranslateElementInit();
+		};
+		
+		// cookies
+		var path = "path=/";
+		var defaultLang = generateLang()
+		//document.cookie = "googtrans=/en/tr;" + path;
+		document.cookie = 'googtrans=/en/' + defaultLang; +  path;
+		
+		var cookies = document.cookie.split(';');
+		for (var i = 0; i < cookies.length; i++) {
+			var cookie = cookies[i].trim();
+				if (cookie.startsWith("googtrans=")) {
+				var value = cookie.substring("googtrans=".length, cookie.length);
+				
+				// modify the cookie value
+				value = "/en/tr";
+				// update the cookie
+                document.cookie = 'googtrans=/en/' + defaultLang; +  path;
+				break;
+			}
+		}
+			function generateLang(){
+			var lang = navigator.language
+			var lang_iso = lang.substring(0, 2);
+			
+			return lang_iso;
+		}
+	</script>
+</body>
+</html>
